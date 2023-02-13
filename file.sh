@@ -20,4 +20,4 @@ cat file1.txt>/home/garik/Desktop/test/file1.txt
 
 
 ln f1.txt /home/garik/Desktop/test/to_move.txt
-rn f1.txt
+rm f1.txt
