@@ -1,4 +1,0 @@
-#! /bin/bash
-
-ln f1.txt /home/garik/Desktop/mv/mov/to_move.txt
-rm f1.txt

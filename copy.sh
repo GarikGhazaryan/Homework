@@ -1,14 +1,15 @@
-#! /bin/bash
+#!/bin/bash
 
-
-
-if [[ -d $1 ]]
-then
-	rsync -a $1/ $2
+if [ ! -d "$1" ]; then
+	cat $1>$2
 else
-	rsync -a $1 $2
+	find "$1" -type f | while read filepath; do
+    path="${filepath/$1/$2}"
+    mkdir -p "$(dirname "$path")"
+    cat "$filepath" > "$path"
+    
+done
+
+
 fi
-
-
-
 
